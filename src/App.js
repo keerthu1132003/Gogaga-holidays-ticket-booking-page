@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Sidebar from "./components/Sidebar/Sidebar";
 import TopHeader from "./components/TopHeader/TopHeader";
 import HeaderTabs from "./components/HeaderTabs/HeaderTabs";
@@ -9,8 +7,6 @@ import FareSummary from "./components/FareSummary/FareSummary";
 import FlightList from "./components/FlightList/FlightList";
 
 function App() {
-  const [showResults, setShowResults] = useState(false);
-
   return (
     <div style={{ display: "flex", minHeight: "100vh", background: "#f5f6fa" }}>
       <Sidebar />
@@ -20,15 +16,10 @@ function App() {
 
         <div style={{ padding: "20px" }}>
           <HeaderTabs />
-          <SearchFilters onSearch={() => setShowResults(true)} />
-
-          {showResults && (
-            <>
-              <RouteInfo />
-              <FareSummary />
-              <FlightList />
-            </>
-          )}
+          <SearchFilters />
+          <RouteInfo />
+          <FareSummary />
+          <FlightList />
         </div>
       </div>
     </div>
