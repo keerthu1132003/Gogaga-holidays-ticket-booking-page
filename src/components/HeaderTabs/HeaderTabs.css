@@ -1,0 +1,20 @@
+.holiday-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  color: #111827;
+}
+
+.tab.active {
+  background: #000000;
+  color: #ffffff;
+}
